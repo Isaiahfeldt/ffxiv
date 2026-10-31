@@ -1,0 +1,58 @@
+[
+  {
+    "Author": "Isaiahfeldt",
+    "Name": "Auto Grit",
+    "InternalName": "AutoGrit",
+    "AssemblyVersion": "0.1.0.0",
+    "Description": "Automatically activates the appropriate tank stance for Gladiator, Paladin, Marauder, Warrior, Dark Knight, or Gunbreaker when PvE combat starts or you enter a dungeon, if stance is missing. Configure with /autogrit.",
+    "ApplicableVersion": "any",
+    "Tags": [
+      "Tank",
+      "Combat"
+    ],
+    "DalamudApiLevel": 15,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "Punchline": "Tank stance for combat and dungeon entry.",
+    "AcceptsFeedback": true,
+    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/DalamudPluginRepo/main/plugins/AutoGrit/0.1.0.0/latest.zip",
+    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/DalamudPluginRepo/main/plugins/AutoGrit/0.1.0.0/latest.zip",
+    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/DalamudPluginRepo/main/plugins/AutoGrit/0.1.0.0/latest.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "LastUpdate": "1793473744",
+    "RepoUrl": "https://github.com/Isaiahfeldt/DalamudPluginRepo"
+  },
+  {
+    "Author": "SHOEGAZEssb",
+    "Name": "Dagobert",
+    "InternalName": "Dagobert",
+    "AssemblyVersion": "1.14.1.1",
+    "Description": "Automates market board penny pinching",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/Isaiahfeldt/Dagobert",
+    "Tags": [
+      "Utility"
+    ],
+    "DalamudApiLevel": 15,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "ImageUrls": [
+      ""
+    ],
+    "IconUrl": "",
+    "Punchline": "Penny pinching to the extreme",
+    "Changelog": "",
+    "AcceptsFeedback": true,
+    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/DalamudPluginRepo/main/plugins/Dagobert/1.14.1.1/latest.zip",
+    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/DalamudPluginRepo/main/plugins/Dagobert/1.14.1.1/latest.zip",
+    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/DalamudPluginRepo/main/plugins/Dagobert/1.14.1.1/latest.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "LastUpdate": "1793472686"
+  }
+]
