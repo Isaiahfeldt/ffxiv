@@ -5,7 +5,7 @@ One custom Dalamud repository for these plugins:
 | Plugin | Purpose | Command |
 | --- | --- | --- |
 | Dagobert | Marketboard pricing with duplicate-item caching and scheduled runs | `/dagobert` |
-| Artisan (fork) | Crafting fork; new marketboard shortcuts temporarily disabled | `/artisan` |
+| Artisan (fork) | Crafting fork with opt-in keyboard market search | `/artisan` |
 | Auto Grit | Configurable stance for all tanks on combat or PvE duty entry | `/autogrit` |
 
 ## Install
@@ -49,8 +49,10 @@ The plugin opens the bell, reprices enabled retainers, exits the bell, and waits
 
 Dagobert 1.14.2.1 adds **Frequency** and **Random extra delay** sliders. A 60-minute frequency plus up to 10 extra minutes waits 60–70 minutes between cycles, measured after each completed run. Zero disables randomness; Run now bypasses the wait.
 
-## Artisan marketboard shortcuts disabled
+## Artisan keyboard market search (opt-in)
 
-Update Artisan to **4.0.5.24**. The new in-game ingredient marketboard search and Ctrl-click action are disabled following a reported game crash after entering the search text. Their custom native UI writes, button-event dispatch, and framework callback have been removed. Existing Artisan functionality and name copying remain available. Do not use versions 4.0.5.22 or 4.0.5.23 for this feature; it remains disabled pending crash investigation and in-game validation.
+Artisan **4.0.5.25** restores the marketboard shortcut using ordinary text-input focus and Enter, not custom Search-button event dispatch or direct search-state writes. It is **off by default** following the prior crash report. Right-click an ingredient and enable **keyboard market search (experimental)**, then use the search menu item or Ctrl+left-click. Shift-click copying is preserved.
+
+Test first with the marketboard already open. The game and its search input must retain focus and shortcut modifiers must be released before Enter is sent. If these checks fail, the request stops and asks you to press Enter manually. Cloud build and 20 automated checks pass; in-game stability and submission are still unverified.
 
 Source: [Isaiahfeldt/Artisan](https://github.com/Isaiahfeldt/Artisan). The package includes its original BSD license.
