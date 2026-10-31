@@ -3,7 +3,7 @@
     "Author": "Taurenkey (Puni.sh)",
     "Name": "Artisan",
     "InternalName": "Artisan",
-    "AssemblyVersion": "4.0.5.25",
+    "AssemblyVersion": "4.0.5.26",
     "Description": "The all-in-one crafting plugin.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Isaiahfeldt/Artisan",
@@ -17,14 +17,14 @@
     "LoadPriority": 0,
     "IconUrl": "https://s3.puni.sh/media/plugin/6/icon-3h8wd5b9qr.png",
     "Punchline": "A 'simple' crafting plugin.",
-    "Changelog": "Restored marketboard ingredient search as an opt-in keyboard mode. Uses the text component and Enter, with focus/modifier checks. Removed custom Search-button dispatch and direct agent/string-field writes. Enable from an ingredient right-click menu; Ctrl-click shortcut is retained.",
+    "Changelog": "Removed the market-search toggle. Ctrl-click and the ingredient context-menu shortcut are always available when near an open/reachable board. They open the board and fill the name only; submit manually. Automatic Enter/button submission has been removed.",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.25/latest.zip",
-    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.25/latest.zip",
-    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.25/latest.zip",
+    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.26/latest.zip",
+    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.26/latest.zip",
+    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.26/latest.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "LastUpdate": "1793482483"
+    "LastUpdate": "1793482736"
   },
   {
     "Author": "Isaiahfeldt",

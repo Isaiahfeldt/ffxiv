@@ -5,7 +5,7 @@ One custom Dalamud repository for these plugins:
 | Plugin | Purpose | Command |
 | --- | --- | --- |
 | Dagobert | Marketboard pricing with duplicate-item caching and scheduled runs | `/dagobert` |
-| Artisan (fork) | Crafting fork with opt-in keyboard market search | `/artisan` |
+| Artisan (fork) | Crafting fork with ingredient marketboard open-and-fill shortcut | `/artisan` |
 | Auto Grit | Configurable stance for all tanks on combat or PvE duty entry | `/autogrit` |
 
 ## Install
@@ -49,10 +49,8 @@ The plugin opens the bell, reprices enabled retainers, exits the bell, and waits
 
 Dagobert 1.14.2.1 adds **Frequency** and **Random extra delay** sliders. A 60-minute frequency plus up to 10 extra minutes waits 60–70 minutes between cycles, measured after each completed run. Zero disables randomness; Run now bypasses the wait.
 
-## Artisan keyboard market search (opt-in)
+## Artisan ingredient marketboard shortcut
 
-Artisan **4.0.5.25** restores the marketboard shortcut using ordinary text-input focus and Enter, not custom Search-button event dispatch or direct search-state writes. It is **off by default** following the prior crash report. Right-click an ingredient and enable **keyboard market search (experimental)**, then use the search menu item or Ctrl+left-click. Shift-click copying is preserved.
-
-Test first with the marketboard already open. The game and its search input must retain focus and shortcut modifiers must be released before Enter is sent. If these checks fail, the request stops and asks you to press Enter manually. Cloud build and 20 automated checks pass; in-game stability and submission are still unverified.
+Artisan **4.0.5.26** removes the toggle. Ctrl+left-click an ingredient name or choose **Search in game marketboard** from its context menu. The shortcut opens a reachable board or uses an open one, then fills the name. **Submit manually with Enter or Search.** Automatic submission has been removed. Shift-click copying remains unchanged.
 
 Source: [Isaiahfeldt/Artisan](https://github.com/Isaiahfeldt/Artisan). The package includes its original BSD license.
