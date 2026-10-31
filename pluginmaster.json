@@ -30,7 +30,7 @@
     "Author": "SHOEGAZEssb",
     "Name": "Dagobert",
     "InternalName": "Dagobert",
-    "AssemblyVersion": "1.14.2.2",
+    "AssemblyVersion": "1.14.3.0",
     "Description": "Automates market board penny pinching",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Isaiahfeldt/Dagobert",
@@ -47,13 +47,13 @@
     ],
     "IconUrl": "",
     "Punchline": "Penny pinching to the extreme",
-    "Changelog": "Fixed scheduled Auto Pinch failing to recognize title-case bell names. Added standard bell ID recognition and inn interaction range, separated targeting from interaction, and wait/retry until the retainer list opens. Existing AutoRetainer suppression no longer blocks runs. Improved waiting/task status.",
+    "Changelog": "Added independent per-retainer checkboxes for scheduled Auto Pinch, including Run Now, plus Enable All, Disable All, and Use Manual Selection. Existing selections are preserved until customized.",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.2.2/latest.zip",
-    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.2.2/latest.zip",
-    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.2.2/latest.zip",
+    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.3.0/latest.zip",
+    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.3.0/latest.zip",
+    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.3.0/latest.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "LastUpdate": "1793479906"
+    "LastUpdate": "1793480246"
   }
 ]
