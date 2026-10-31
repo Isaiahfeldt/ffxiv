@@ -45,3 +45,5 @@ This updater maintains this central index. Individual plugin release workflows m
 Update Dagobert to 1.14.2.0 or newer. In `/dagobert` → **Scheduled Auto Pinch**, enable scheduling and set an interval in minutes (60 = one hour). Park within reach of a summoning bell with menus closed. **Run now** starts the first cycle when available; **Cancel and pause** stops automation until you resume it in this plugin session.
 
 The plugin opens the bell, reprices enabled retainers, exits the bell, and waits the configured interval after finishing. It does not move or teleport. Busy/out-of-range characters wait; errors or interruptions during a run pause scheduling. Fresh prices are fetched each cycle, with duplicate-item cache reuse within that cycle. Bell interaction and repeated cycles still require in-game testing.
+
+Dagobert 1.14.2.1 adds **Frequency** and **Random extra delay** sliders. A 60-minute frequency plus up to 10 extra minutes waits 60–70 minutes between cycles, measured after each completed run. Zero disables randomness; Run now bypasses the wait.
