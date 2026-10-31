@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../AutoGrit/ActivationOptions.cs" Link="ActivationOptions.cs" />
+    <Compile Include="../AutoGrit/TankStance.cs" Link="TankStance.cs" />
+    <Compile Include="../AutoGrit/CombatStartController.cs" Link="CombatStartController.cs" />
+  </ItemGroup>
+</Project>

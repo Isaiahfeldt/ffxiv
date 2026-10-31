@@ -5,7 +5,7 @@ One custom Dalamud repository for these plugins:
 | Plugin | Purpose | Command |
 | --- | --- | --- |
 | Dagobert | Marketboard pricing automation with cached prices for duplicate items | `/dagobert` |
-| Auto Grit | Appropriate stance for all tanks on combat start or regular dungeon entry | `/autogrit` |
+| Auto Grit | Configurable stance for all tanks on combat or PvE duty entry | `/autogrit` |
 
 ## Install
 
@@ -19,11 +19,11 @@ Save, then open `/xlplugins` and install the plugins you want. You only need thi
 
 When migrating from the old Dagobert-specific repository, back up your configuration, remove its old custom repository URL, and reinstall Dagobert from this repository if Dalamud still associates it with the old source. Do not load duplicate developer copies alongside installed plugins.
 
-Both initial packages compile against Dalamud API 15. Their in-game automation still requires testing. Auto Grit applies the relevant stance for Gladiator/Paladin, Marauder/Warrior, Dark Knight, and Gunbreaker. Disable it when you intend to off-tank without stance.
+Both initial packages compile against Dalamud API 15. Their in-game automation still requires testing. Auto Grit applies the relevant stance for Gladiator/Paladin, Marauder/Warrior, Dark Knight, and Gunbreaker. Configure trigger toggles, jobs, delays, other-tank head start, retries, and chat messages with `/autogrit`. Disable it when you intend to off-tank without stance.
 
 ## Publish a plugin or update
 
-Keep plugin source in its own project or repository. This repository hosts built packages and the shared installation manifest; it does not need each plugin's source.
+Auto Grit source and behavior checks live in [src/AutoGrit](src/AutoGrit/README.md). Dagobert source lives in [Isaiahfeldt/Dagobert](https://github.com/Isaiahfeldt/Dagobert). This repository hosts their packages and shared installation manifest.
 
 1. Build and test the plugin; increase its four-part assembly version for each update.
 2. From this repository, import the resulting package:

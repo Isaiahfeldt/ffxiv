@@ -1,0 +1,13 @@
+{
+  "Author": "Isaiahfeldt",
+  "Name": "Auto Grit",
+  "InternalName": "AutoGrit",
+  "Punchline": "Configurable tank stance for combat and duties.",
+  "Description": "Activates the appropriate tank stance on combat or PvE duty entry, including dungeons, trials, raids, and roulette destinations. Includes per-job switches, activation delays, an optional other-tank head start in duties, retry duration, and chat messages. Configure with /autogrit.",
+  "ApplicableVersion": "any",
+  "Tags": [
+    "Tank",
+    "Combat"
+  ],
+  "Changelog": "Added duty/combat toggles, per-job settings, activation and other-tank delays, retry duration, and optional chat messages. Duty entry now includes trials, raids, and other PvE duties."
+}
