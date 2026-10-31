@@ -5,7 +5,7 @@ One custom Dalamud repository for these plugins:
 | Plugin | Purpose | Command |
 | --- | --- | --- |
 | Dagobert | Marketboard pricing with duplicate-item caching and scheduled runs | `/dagobert` |
-| Artisan (fork) | Crafting with ingredient right-click search in the actual game marketboard | `/artisan` |
+| Artisan (fork) | Crafting fork; new marketboard shortcuts temporarily disabled | `/artisan` |
 | Auto Grit | Configurable stance for all tanks on combat or PvE duty entry | `/autogrit` |
 
 ## Install
@@ -49,10 +49,8 @@ The plugin opens the bell, reprices enabled retainers, exits the bell, and waits
 
 Dagobert 1.14.2.1 adds **Frequency** and **Random extra delay** sliders. A 60-minute frequency plus up to 10 extra minutes waits 60–70 minutes between cycles, measured after each completed run. Zero disables randomness; Run now bypasses the wait.
 
-## Artisan ingredient marketboard shortcut
+## Artisan marketboard shortcuts disabled
 
-Artisan 4.0.5.22 adds **Search in game marketboard** to the Ingredients-panel right-click menu. Stand near a marketboard or open it first; Artisan opens the board if needed and fills/submits the ingredient name in the normal game search. **Market Board Lookup** remains the separate MarketBoard plugin option. Replace the original Artisan installation with this fork rather than loading both. If the new entry is disabled, hover it for the reason. The native search and UI transitions still need in-game verification.
+Update Artisan to **4.0.5.24**. The new in-game ingredient marketboard search and Ctrl-click action are disabled following a reported game crash after entering the search text. Their custom native UI writes, button-event dispatch, and framework callback have been removed. Existing Artisan functionality and name copying remain available. Do not use versions 4.0.5.22 or 4.0.5.23 for this feature; it remains disabled pending crash investigation and in-game validation.
 
 Source: [Isaiahfeldt/Artisan](https://github.com/Isaiahfeldt/Artisan). The package includes its original BSD license.
-
-Artisan **4.0.5.23** replaces the unsuccessful direct search call with the actual game Search button after text entry. **Ctrl+left-click an ingredient name** performs the same marketboard action as the context menu. Shift-click and Ctrl+Shift-click still copy the name. Build and 18 automated checks pass; in-game confirmation of the revised submission is still needed.

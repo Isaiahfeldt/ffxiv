@@ -3,7 +3,7 @@
     "Author": "Taurenkey (Puni.sh)",
     "Name": "Artisan",
     "InternalName": "Artisan",
-    "AssemblyVersion": "4.0.5.23",
+    "AssemblyVersion": "4.0.5.24",
     "Description": "The all-in-one crafting plugin.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Isaiahfeldt/Artisan",
@@ -17,14 +17,14 @@
     "LoadPriority": 0,
     "IconUrl": "https://s3.puni.sh/media/plugin/6/icon-3h8wd5b9qr.png",
     "Punchline": "A 'simple' crafting plugin.",
-    "Changelog": "Fixed ingredient marketboard search submission by clicking the game Search button after text entry. Added Ctrl+left-click on ingredient names; Shift-click still copies names.",
+    "Changelog": "Disabled the new in-game ingredient marketboard search and Ctrl-click action following a reported game crash. Removed all custom native search/GUI-event dispatch and update hooks. Existing Artisan features and name copying remain available.",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.23/latest.zip",
-    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.23/latest.zip",
-    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.23/latest.zip",
+    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.24/latest.zip",
+    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.24/latest.zip",
+    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.24/latest.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "LastUpdate": "1793481982"
+    "LastUpdate": "1793482171"
   },
   {
     "Author": "Isaiahfeldt",
