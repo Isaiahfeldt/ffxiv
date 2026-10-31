@@ -54,3 +54,5 @@ Dagobert 1.14.2.1 adds **Frequency** and **Random extra delay** sliders. A 60-mi
 Artisan 4.0.5.22 adds **Search in game marketboard** to the Ingredients-panel right-click menu. Stand near a marketboard or open it first; Artisan opens the board if needed and fills/submits the ingredient name in the normal game search. **Market Board Lookup** remains the separate MarketBoard plugin option. Replace the original Artisan installation with this fork rather than loading both. If the new entry is disabled, hover it for the reason. The native search and UI transitions still need in-game verification.
 
 Source: [Isaiahfeldt/Artisan](https://github.com/Isaiahfeldt/Artisan). The package includes its original BSD license.
+
+Artisan **4.0.5.23** replaces the unsuccessful direct search call with the actual game Search button after text entry. **Ctrl+left-click an ingredient name** performs the same marketboard action as the context menu. Shift-click and Ctrl+Shift-click still copy the name. Build and 18 automated checks pass; in-game confirmation of the revised submission is still needed.

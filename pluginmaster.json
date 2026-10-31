@@ -3,7 +3,7 @@
     "Author": "Taurenkey (Puni.sh)",
     "Name": "Artisan",
     "InternalName": "Artisan",
-    "AssemblyVersion": "4.0.5.22",
+    "AssemblyVersion": "4.0.5.23",
     "Description": "The all-in-one crafting plugin.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Isaiahfeldt/Artisan",
@@ -17,14 +17,14 @@
     "LoadPriority": 0,
     "IconUrl": "https://s3.puni.sh/media/plugin/6/icon-3h8wd5b9qr.png",
     "Punchline": "A 'simple' crafting plugin.",
-    "Changelog": "Added ingredient right-click search in the actual in-game marketboard, using an open board or a nearby board.",
+    "Changelog": "Fixed ingredient marketboard search submission by clicking the game Search button after text entry. Added Ctrl+left-click on ingredient names; Shift-click still copies names.",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.22/latest.zip",
-    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.22/latest.zip",
-    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.22/latest.zip",
+    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.23/latest.zip",
+    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.23/latest.zip",
+    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.23/latest.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "LastUpdate": "1793480988"
+    "LastUpdate": "1793481982"
   },
   {
     "Author": "Isaiahfeldt",
