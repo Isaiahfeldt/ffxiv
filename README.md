@@ -4,7 +4,7 @@ One custom Dalamud repository for these plugins:
 
 | Plugin | Purpose | Command |
 | --- | --- | --- |
-| Dagobert | Marketboard pricing automation with cached prices for duplicate items | `/dagobert` |
+| Dagobert | Marketboard pricing with duplicate-item caching and scheduled runs | `/dagobert` |
 | Auto Grit | Configurable stance for all tanks on combat or PvE duty entry | `/autogrit` |
 
 ## Install
@@ -39,3 +39,9 @@ Auto Grit source and behavior checks live in [src/AutoGrit](src/AutoGrit/README.
 GitHub Releases and GitHub Pages are optional. All downloads come directly from versioned files in this repository. No separate plugin URL needs to be added in Dalamud for future plugins.
 
 This updater maintains this central index. Individual plugin release workflows must publish here to automate updates; the existing Dagobert workflow currently still updates its older per-plugin repository.
+
+## Scheduled Dagobert runs
+
+Update Dagobert to 1.14.2.0 or newer. In `/dagobert` → **Scheduled Auto Pinch**, enable scheduling and set an interval in minutes (60 = one hour). Park within reach of a summoning bell with menus closed. **Run now** starts the first cycle when available; **Cancel and pause** stops automation until you resume it in this plugin session.
+
+The plugin opens the bell, reprices enabled retainers, exits the bell, and waits the configured interval after finishing. It does not move or teleport. Busy/out-of-range characters wait; errors or interruptions during a run pause scheduling. Fresh prices are fetched each cycle, with duplicate-item cache reuse within that cycle. Bell interaction and repeated cycles still require in-game testing.

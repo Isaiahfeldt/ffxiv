@@ -30,7 +30,7 @@
     "Author": "SHOEGAZEssb",
     "Name": "Dagobert",
     "InternalName": "Dagobert",
-    "AssemblyVersion": "1.14.1.1",
+    "AssemblyVersion": "1.14.2.0",
     "Description": "Automates market board penny pinching",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Isaiahfeldt/Dagobert",
@@ -47,13 +47,13 @@
     ],
     "IconUrl": "",
     "Punchline": "Penny pinching to the extreme",
-    "Changelog": "",
+    "Changelog": "Added opt-in scheduled Auto Pinch with a configurable interval, nearby summoning-bell interaction, countdown, Run Now, Pause/Resume, and cancellation/error cleanup. Each cycle fetches fresh prices while reusing duplicate-item prices within the run.",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.1.1/latest.zip",
-    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.1.1/latest.zip",
-    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.1.1/latest.zip",
+    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.2.0/latest.zip",
+    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.2.0/latest.zip",
+    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.2.0/latest.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "LastUpdate": "1793472686"
+    "LastUpdate": "1793479301"
   }
 ]
