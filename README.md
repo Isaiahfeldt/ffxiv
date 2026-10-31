@@ -5,6 +5,7 @@ One custom Dalamud repository for these plugins:
 | Plugin | Purpose | Command |
 | --- | --- | --- |
 | Dagobert | Marketboard pricing with duplicate-item caching and scheduled runs | `/dagobert` |
+| Artisan (fork) | Crafting with ingredient right-click search in the actual game marketboard | `/artisan` |
 | Auto Grit | Configurable stance for all tanks on combat or PvE duty entry | `/autogrit` |
 
 ## Install
@@ -47,3 +48,9 @@ Update Dagobert to 1.14.2.0 or newer. In `/dagobert` → **Scheduled Auto Pinch*
 The plugin opens the bell, reprices enabled retainers, exits the bell, and waits the configured interval after finishing. It does not move or teleport. Busy/out-of-range characters wait; errors or interruptions during a run pause scheduling. Fresh prices are fetched each cycle, with duplicate-item cache reuse within that cycle. Bell interaction and repeated cycles still require in-game testing.
 
 Dagobert 1.14.2.1 adds **Frequency** and **Random extra delay** sliders. A 60-minute frequency plus up to 10 extra minutes waits 60–70 minutes between cycles, measured after each completed run. Zero disables randomness; Run now bypasses the wait.
+
+## Artisan ingredient marketboard shortcut
+
+Artisan 4.0.5.22 adds **Search in game marketboard** to the Ingredients-panel right-click menu. Stand near a marketboard or open it first; Artisan opens the board if needed and fills/submits the ingredient name in the normal game search. **Market Board Lookup** remains the separate MarketBoard plugin option. Replace the original Artisan installation with this fork rather than loading both. If the new entry is disabled, hover it for the reason. The native search and UI transitions still need in-game verification.
+
+Source: [Isaiahfeldt/Artisan](https://github.com/Isaiahfeldt/Artisan). The package includes its original BSD license.

@@ -1,5 +1,32 @@
 [
   {
+    "Author": "Taurenkey (Puni.sh)",
+    "Name": "Artisan",
+    "InternalName": "Artisan",
+    "AssemblyVersion": "4.0.5.22",
+    "Description": "The all-in-one crafting plugin.",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/Isaiahfeldt/Artisan",
+    "Tags": [
+      "crafting"
+    ],
+    "DalamudApiLevel": 15,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "IconUrl": "https://s3.puni.sh/media/plugin/6/icon-3h8wd5b9qr.png",
+    "Punchline": "A 'simple' crafting plugin.",
+    "Changelog": "Added ingredient right-click search in the actual in-game marketboard, using an open board or a nearby board.",
+    "AcceptsFeedback": true,
+    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.22/latest.zip",
+    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.22/latest.zip",
+    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Artisan/4.0.5.22/latest.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "LastUpdate": "1793480988"
+  },
+  {
     "Author": "Isaiahfeldt",
     "Name": "Auto Grit",
     "InternalName": "AutoGrit",
