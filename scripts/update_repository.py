@@ -74,7 +74,7 @@ def update(root, archives, repository, branch):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('archives', nargs='*', type=Path, help='Built latest.zip files to import')
-    parser.add_argument('--repository', default='Isaiahfeldt/DalamudPluginRepo')
+    parser.add_argument('--repository', default='Isaiahfeldt/ffxiv')
     parser.add_argument('--branch', default='main')
     args = parser.parse_args()
     if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', args.repository):

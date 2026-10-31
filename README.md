@@ -12,7 +12,7 @@ One custom Dalamud repository for these plugins:
 In Dalamud Settings, open Experimental / Custom Plugin Repositories and add:
 
 ```text
-https://raw.githubusercontent.com/Isaiahfeldt/DalamudPluginRepo/main/pluginmaster.json
+https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/pluginmaster.json
 ```
 
 Save, then open `/xlplugins` and install the plugins you want. You only need this one URL for all plugins hosted here.

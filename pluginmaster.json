@@ -17,13 +17,13 @@
     "LoadPriority": 0,
     "Punchline": "Tank stance for combat and dungeon entry.",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/DalamudPluginRepo/main/plugins/AutoGrit/0.1.0.0/latest.zip",
-    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/DalamudPluginRepo/main/plugins/AutoGrit/0.1.0.0/latest.zip",
-    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/DalamudPluginRepo/main/plugins/AutoGrit/0.1.0.0/latest.zip",
+    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/AutoGrit/0.1.0.0/latest.zip",
+    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/AutoGrit/0.1.0.0/latest.zip",
+    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/AutoGrit/0.1.0.0/latest.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
     "LastUpdate": "1793473744",
-    "RepoUrl": "https://github.com/Isaiahfeldt/DalamudPluginRepo"
+    "RepoUrl": "https://github.com/Isaiahfeldt/ffxiv"
   },
   {
     "Author": "SHOEGAZEssb",
@@ -48,9 +48,9 @@
     "Punchline": "Penny pinching to the extreme",
     "Changelog": "",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/DalamudPluginRepo/main/plugins/Dagobert/1.14.1.1/latest.zip",
-    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/DalamudPluginRepo/main/plugins/Dagobert/1.14.1.1/latest.zip",
-    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/DalamudPluginRepo/main/plugins/Dagobert/1.14.1.1/latest.zip",
+    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.1.1/latest.zip",
+    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.1.1/latest.zip",
+    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.1.1/latest.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
     "LastUpdate": "1793472686"
