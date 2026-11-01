@@ -57,7 +57,7 @@
     "Author": "SHOEGAZEssb",
     "Name": "Dagobert",
     "InternalName": "Dagobert",
-    "AssemblyVersion": "1.14.3.0",
+    "AssemblyVersion": "1.14.3.1",
     "Description": "Automates market board penny pinching",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Isaiahfeldt/Dagobert",
@@ -74,13 +74,13 @@
     ],
     "IconUrl": "",
     "Punchline": "Penny pinching to the extreme",
-    "Changelog": "Added independent per-retainer checkboxes for scheduled Auto Pinch, including Run Now, plus Enable All, Disable All, and Use Manual Selection. Existing selections are preserved until customized.",
+    "Changelog": "Validate item ID, HQ/NQ and active request before accepting, caching, or applying prices. Ignore market data for other items and obsolete responses. Stop on identity mismatches. Post-pinch actions now also clear their per-run cache.",
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.3.0/latest.zip",
-    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.3.0/latest.zip",
-    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.3.0/latest.zip",
+    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.3.1/latest.zip",
+    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.3.1/latest.zip",
+    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/Dagobert/1.14.3.1/latest.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "LastUpdate": "1793480246"
+    "LastUpdate": "1793497389"
   }
 ]
