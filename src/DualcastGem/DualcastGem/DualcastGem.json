@@ -1,0 +1,11 @@
+{
+  "Author": "Isaiahfeldt",
+  "Name": "Dualcast Gem",
+  "InternalName": "DualcastGem",
+  "Punchline": "A glowing gem for Red Mage's Dualcast.",
+  "Description": "Displays a movable crystal: ruby red while Dualcast is active, gray otherwise. Includes size, opacity, position lock, combat-only visibility, and previews. Configure with /dualcastgem.",
+  "ApplicableVersion": "any",
+  "RepoUrl": "https://github.com/Isaiahfeldt/ffxiv",
+  "Tags": ["Red Mage", "Dualcast", "HUD"],
+  "Changelog": "Initial Dualcast gem indicator."
+}

@@ -24,6 +24,8 @@ Both initial packages compile against Dalamud API 15. Their in-game automation s
 
 ## Publish a plugin or update
 
+Dualcast Gem source and testing instructions are available in [src/DualcastGem](src/DualcastGem/README.md). It is currently a development build and has not been added to the public plugin index.
+
 Auto Grit source and behavior checks live in [src/AutoGrit](src/AutoGrit/README.md). Dagobert source lives in [Isaiahfeldt/Dagobert](https://github.com/Isaiahfeldt/Dagobert). This repository hosts their packages and shared installation manifest.
 
 1. Build and test the plugin; increase its four-part assembly version for each update.
