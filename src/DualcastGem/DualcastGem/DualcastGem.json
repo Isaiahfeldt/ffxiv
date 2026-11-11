@@ -3,9 +3,9 @@
   "Name": "Dualcast Gem",
   "InternalName": "DualcastGem",
   "Punchline": "A glowing gem for Red Mage's Dualcast.",
-  "Description": "Displays a movable crystal: ruby red while Dualcast is active, gray otherwise. Includes size, opacity, position lock, combat-only visibility, and previews. Configure with /dualcastgem.",
+  "Description": "Displays a movable crystal: blue while Swiftcast is active, ruby red for Dualcast, gray otherwise. Swiftcast takes priority when both are active. Includes size, opacity, position lock, combat-only visibility, and previews. Configure with /dualcastgem.",
   "ApplicableVersion": "any",
   "RepoUrl": "https://github.com/Isaiahfeldt/ffxiv",
   "Tags": ["Red Mage", "Dualcast", "HUD"],
-  "Changelog": "Initial Dualcast gem indicator."
+  "Changelog": "Added blue Swiftcast state with priority over Dualcast and previews for all three states."
 }
