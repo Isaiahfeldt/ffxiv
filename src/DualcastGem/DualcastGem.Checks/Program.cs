@@ -7,10 +7,19 @@ void Check(bool condition, string name)
     checks++;
 }
 
-Check(GemState.IsActive(new uint[] { 50, 1249 }), "Dualcast lights the gem");
-Check(!GemState.IsActive(new uint[] { 167 }), "Swiftcast alone stays unlit");
-Check(!GemState.IsActive(Array.Empty<uint>()), "Consumed/expired status stays unlit");
-Check(!GemState.IsActive(new uint[] { 1211 }), "Other instant-cast effects stay unlit");
+Check(GemState.Resolve(new uint[] { 50, 1249 }) == GemMode.Dualcast, "Dualcast is red");
+Check(GemState.Resolve(new uint[] { 167 }) == GemMode.Swiftcast, "Swiftcast alone is blue");
+Check(GemState.Resolve(new uint[] { 1249, 167 }) == GemMode.Swiftcast, "Swiftcast overrides Dualcast");
+Check(GemState.Resolve(new uint[] { 167, 1249 }) == GemMode.Swiftcast, "Priority ignores status ordering");
+Check(GemState.Resolve(Array.Empty<uint>()) == GemMode.Inactive, "Neither buff is gray");
+Check(GemState.Resolve(new uint[] { 1211 }) == GemMode.Inactive, "Unrelated effects do not light gem");
+// A fresh snapshot must immediately reflect consumption/expiry without retaining the prior color.
+var snapshots = new uint[][] { new uint[] { 1249 }, new uint[] { 1249, 167 }, new uint[] { 1249 }, new uint[] { 167 }, Array.Empty<uint>() };
+var expectedModes = new[] { GemMode.Dualcast, GemMode.Swiftcast, GemMode.Dualcast, GemMode.Swiftcast, GemMode.Inactive };
+for (var i = 0; i < snapshots.Length; i++)
+    Check(GemState.Resolve(snapshots[i]) == expectedModes[i], $"Buff transition {i}");
+foreach (var mode in new[] { GemMode.Dualcast, GemMode.Swiftcast })
+    Check(GemState.IsVisible(true, true, 35, true, false, true, mode != GemMode.Inactive, false), $"Hide-inactive keeps {mode} visible");
 // Exercise every combination of visibility gates, including stale status on job changes/logout.
 for (var bits = 0; bits < 256; bits++)
 {

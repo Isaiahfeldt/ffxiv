@@ -23,9 +23,10 @@ public sealed class Plugin : IDalamudPlugin
 
     private readonly Configuration config;
     private readonly ISharedImmediateTexture atlas;
+    private readonly ISharedImmediateTexture swiftcastTexture;
     private bool settingsOpen;
     private bool preview;
-    private bool previewActive = true;
+    private int previewMode = (int)GemMode.Dualcast;
     private bool positionDirty;
     private string? textureError;
 
@@ -34,6 +35,7 @@ public sealed class Plugin : IDalamudPlugin
         config = PluginInterface.GetPluginConfig() as Configuration ?? new Configuration();
         config.Normalize();
         atlas = Textures.GetFromFile(Path.Combine(PluginInterface.AssemblyLocation.DirectoryName!, "Assets", "gems.png"));
+        swiftcastTexture = Textures.GetFromFile(Path.Combine(PluginInterface.AssemblyLocation.DirectoryName!, "Assets", "swiftcast.png"));
         Commands.AddHandler("/dualcastgem", new CommandInfo(OnCommand) { HelpMessage = "Configure and position the Dualcast gem." });
         PluginInterface.UiBuilder.Draw += Draw;
         PluginInterface.UiBuilder.OpenConfigUi += OpenSettings;
@@ -54,14 +56,14 @@ public sealed class Plugin : IDalamudPlugin
         if (!settingsOpen) preview = false;
 
         var player = Objects.LocalPlayer;
-        var active = player != null && GemState.IsActive(player.StatusList.Select(s => s.StatusId));
+        var mode = player == null ? GemMode.Inactive : GemState.Resolve(player.StatusList.Select(s => s.StatusId));
         var blocked = Condition[ConditionFlag.BetweenAreas] || Condition[ConditionFlag.BetweenAreas51]
             || Condition[ConditionFlag.WatchingCutscene] || Condition[ConditionFlag.WatchingCutscene78];
         var showPreview = settingsOpen && preview && ClientState.IsLoggedIn && !blocked;
         if (showPreview || GemState.IsVisible(config.Enabled, ClientState.IsLoggedIn,
                 player?.ClassJob.RowId ?? 0, Condition[ConditionFlag.InCombat], config.CombatOnly,
-                config.HideWhenInactive, active, blocked))
-            DrawGem(showPreview ? previewActive : active);
+                config.HideWhenInactive, mode != GemMode.Inactive, blocked))
+            DrawGem(showPreview ? (GemMode)previewMode : mode);
 
         // Persist once after a drag, including when the gem becomes hidden mid-drag.
         if (positionDirty && !ImGui.IsMouseDown(ImGuiMouseButton.Left))
@@ -71,11 +73,12 @@ public sealed class Plugin : IDalamudPlugin
         }
     }
 
-    private void DrawGem(bool active)
+    private void DrawGem(GemMode mode)
     {
-        if (!atlas.TryGetWrap(out var texture, out var error))
+        var source = mode == GemMode.Swiftcast ? swiftcastTexture : atlas;
+        if (!source.TryGetWrap(out var texture, out var error))
         {
-            textureError = error == null ? null : "Unable to load Assets/gems.png. Reinstall the complete plugin package.";
+            textureError = error == null ? null : "Unable to load gem artwork. Reinstall the complete plugin package.";
             return;
         }
         textureError = null;
@@ -95,9 +98,15 @@ public sealed class Plugin : IDalamudPlugin
         if (ImGui.Begin("##DualcastGemIndicator", flags))
         {
             // Equal square UV regions align both gems without modifying the approved atlas.
-            var left = active ? 1257f : 270f;
+            var left = mode == GemMode.Dualcast ? 1257f : 270f;
             var uv0 = new Vector2(left / 2172f, 16f / 724f);
             var uv1 = new Vector2((left + 648f) / 2172f, 664f / 724f);
+            if (mode == GemMode.Swiftcast)
+            {
+                // Match the blue artwork's visible frame bounds to the original atlas.
+                uv0 = new Vector2(85f / 1278f, 3f / 1230f);
+                uv1 = new Vector2(1192f / 1278f, 1175f / 1230f);
+            }
             ImGui.GetWindowDrawList().AddImage(texture.Handle, pos, pos + size, uv0, uv1,
                 ImGui.ColorConvertFloat4ToU32(new Vector4(1, 1, 1, config.Opacity)));
             if (!config.Locked)
@@ -125,7 +134,7 @@ public sealed class Plugin : IDalamudPlugin
             var changed = ImGui.Checkbox("Enabled", ref config.Enabled);
             changed |= ImGui.Checkbox("Lock position (click-through)", ref config.Locked);
             changed |= ImGui.Checkbox("Only show in combat", ref config.CombatOnly);
-            changed |= ImGui.Checkbox("Hide when Dualcast is inactive", ref config.HideWhenInactive);
+            changed |= ImGui.Checkbox("Hide when neither buff is active", ref config.HideWhenInactive);
             changed |= ImGui.SliderFloat("Size", ref config.Size, 40, 300, "%.0f px");
             changed |= ImGui.SliderFloat("Opacity", ref config.Opacity, 0.15f, 1, "%.2f");
             if (ImGui.Button("Reset position"))
@@ -136,8 +145,8 @@ public sealed class Plugin : IDalamudPlugin
             }
             ImGui.Separator();
             ImGui.Checkbox("Preview gem (any job)", ref preview);
-            if (preview) ImGui.Checkbox("Preview lit state", ref previewActive);
-            ImGui.TextWrapped("Unlock and drag the gem to position it. Preview ends when this window closes. Normally the gem appears only on Red Mage: red for Dualcast, gray otherwise. Swiftcast does not light it up.");
+            if (preview) ImGui.Combo("Preview state", ref previewMode, "Inactive (gray)\0Dualcast (red)\0Swiftcast (blue)\0");
+            ImGui.TextWrapped("Unlock and drag the gem to position it. Preview ends when this window closes. Normally the gem appears only on Red Mage: blue for Swiftcast, red for Dualcast, gray otherwise. Swiftcast takes priority when both buffs are active.");
             if (textureError != null) ImGui.TextWrapped(textureError);
             if (changed) Save();
         }

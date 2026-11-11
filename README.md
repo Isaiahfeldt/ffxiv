@@ -6,7 +6,7 @@ One custom Dalamud repository for these plugins:
 | --- | --- | --- |
 | Dagobert | Marketboard pricing with duplicate-item caching and scheduled runs | `/dagobert` |
 | Artisan (fork) | Crafting fork with ingredient marketboard open-and-fill shortcut | `/artisan` |
-| Dualcast Gem | Movable glowing Red Mage Dualcast indicator | `/dualcastgem` |
+| Dualcast Gem | Movable Red Mage Dualcast/Swiftcast gem | `/dualcastgem` |
 | Auto Grit | Configurable stance for all tanks on combat or PvE duty entry | `/autogrit` |
 
 ## Install
@@ -25,7 +25,7 @@ Both initial packages compile against Dalamud API 15. Their in-game automation s
 
 ## Publish a plugin or update
 
-Dualcast Gem source and testing instructions are available in [src/DualcastGem](src/DualcastGem/README.md). Version 0.1.0.0 is available in the plugin feed for in-game testing. Open `/dualcastgem` to configure or preview the gem.
+Dualcast Gem source and testing instructions are available in [src/DualcastGem](src/DualcastGem/README.md). Version 0.2.0.0 is available in the plugin feed for in-game testing. Open `/dualcastgem` to configure or preview the gem.
 
 Auto Grit source and behavior checks live in [src/AutoGrit](src/AutoGrit/README.md). Dagobert source lives in [Isaiahfeldt/Dagobert](https://github.com/Isaiahfeldt/Dagobert). This repository hosts their packages and shared installation manifest.
 

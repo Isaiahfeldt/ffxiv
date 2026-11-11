@@ -1,15 +1,27 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace DualcastGem;
+
+internal enum GemMode { Inactive, Dualcast, Swiftcast }
 
 internal static class GemState
 {
     internal const uint RedMageJob = 35;
     internal const uint DualcastStatus = 1249;
 
-    internal static bool IsActive(IEnumerable<uint> statuses) => statuses.Contains(DualcastStatus);
+    internal const uint SwiftcastStatus = 167;
+
+    internal static GemMode Resolve(IEnumerable<uint> statuses)
+    {
+        var result = GemMode.Inactive;
+        foreach (var status in statuses)
+        {
+            if (status == SwiftcastStatus) return GemMode.Swiftcast;
+            if (status == DualcastStatus) result = GemMode.Dualcast;
+        }
+        return result;
+    }
 
     internal static bool IsVisible(bool enabled, bool loggedIn, uint job, bool inCombat,
         bool combatOnly, bool hideInactive, bool active, bool blocked) =>
