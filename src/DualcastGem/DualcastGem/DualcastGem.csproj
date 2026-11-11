@@ -1,0 +1,11 @@
+<Project Sdk="Dalamud.NET.Sdk/15.0.0">
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows7.0</TargetFramework>
+    <Version>0.1.0.0</Version>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="DualcastGem.json" />
+    <Content Include="Assets/gems.png" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
