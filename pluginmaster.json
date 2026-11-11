@@ -82,5 +82,33 @@
     "IsHide": false,
     "IsTestingExclusive": false,
     "LastUpdate": "1793497389"
+  },
+  {
+    "Author": "Isaiahfeldt",
+    "Name": "Dualcast Gem",
+    "InternalName": "DualcastGem",
+    "AssemblyVersion": "0.1.0.0",
+    "Description": "Displays a movable crystal: ruby red while Dualcast is active, gray otherwise. Includes size, opacity, position lock, combat-only visibility, and previews. Configure with /dualcastgem.",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/Isaiahfeldt/ffxiv",
+    "Tags": [
+      "Red Mage",
+      "Dualcast",
+      "HUD"
+    ],
+    "DalamudApiLevel": 15,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "Punchline": "A glowing gem for Red Mage's Dualcast.",
+    "Changelog": "Initial Dualcast gem indicator.",
+    "AcceptsFeedback": true,
+    "DownloadLinkInstall": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/DualcastGem/0.1.0.0/latest.zip",
+    "DownloadLinkUpdate": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/DualcastGem/0.1.0.0/latest.zip",
+    "DownloadLinkTesting": "https://raw.githubusercontent.com/Isaiahfeldt/ffxiv/main/plugins/DualcastGem/0.1.0.0/latest.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "LastUpdate": "1794373084"
   }
 ]
